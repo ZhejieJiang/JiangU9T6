@@ -34,7 +34,14 @@ public class ShippingTest {
 
 
         // add your code here
-
+        for(ShippingItem item: itemList)
+        {
+            if(item instanceof InsuredShippingItem)
+            {
+                ((InsuredShippingItem) item).addMoreInsurance(30);
+            }
+            totalCost += item.getCost();
+        }
 
 
         // This should print 345.0 if your code is correct
